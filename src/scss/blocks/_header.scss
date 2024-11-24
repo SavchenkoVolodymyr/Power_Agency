@@ -1,0 +1,55 @@
+.header {
+	position: sticky;
+	top: 26px;
+	margin-bottom: 124px;
+	.header_in {
+		max-width: 794px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+        .header_logo{
+            display: block;
+            position: relative;
+            min-width: 94px;
+            height: 38px;
+            line-height: 38px;
+            text-align:center;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 700;
+            &::after{
+                content: '';
+                position: absolute;
+                top: 21px;
+                right: 0;
+                width: 6px;
+                height: 6px;
+                background: url(../../imgs/Ellipse_82.svg) center no-repeat;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 16px;
+                height: 16px;
+                background: url(../../imgs/Ellipse_83.svg) center no-repeat;
+            }
+        }
+		.nav_list {
+			display: flex;
+			column-gap: 60px;
+			.nav_list__link {
+				text-decoration: none;
+				font-size: 16px;
+				font-weight: 400;
+                color:#1E1F4B;
+                border: 1px solid #fff;
+                &:hover{
+                    border: 1px solid #1E1F4B;
+                }
+			}
+           
+		}
+	}
+}

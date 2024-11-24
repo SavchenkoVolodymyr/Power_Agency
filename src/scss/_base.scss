@@ -34,6 +34,8 @@ body {
 }
 
 .container {
+	max-width: 1200px;
+	padding: 0 30px;
 	// max-width: 126rem;
 	width: 100%;
 	
@@ -44,10 +46,9 @@ body {
 
 /* remove */
 body {
-	font-family: cursive;
+	font-family: Poppins;
 }
 
-header,
 footer {
 	padding: 30px 0;
 	display: flex;
@@ -78,6 +79,10 @@ footer {
 		object-fit: cover;
 		object-position: center;
 	  }
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after{
+	color: brown;
   }
 
 
