@@ -1,18 +1,29 @@
-// :root {
-// 	--color_accent: #2947A9;
-// }
-
-// colors
 
 $color_white: #fff;
 $color_black: #000;
+
+$color_title: #1e1f4b;
+$color_text: #2E3E5C;
+$color_text_2: #03014C;
+
+$color_bg_2: rgba(112, 111, 229, 0.02);
+$color_form_tytle: rgba(30, 31, 75, 1);
+$color_form_text: rgba(27, 29, 33, 0.75);
+$color_bg_button:rgb(112, 111, 229);
+$color_bg_button_sh: rgba(112, 111, 229, 0.5);
+$color_form_bg:rgba(112, 111, 229, 0.15);
+
+
 
 // $color_accent: #2947a9;
 // $color_title: #292e3d;
 
 // $color_hover: #F9995D;
+$colums_gap: 3rem;
+$colums-number: 2;
+$rows_gap: 6rem;
 
-// $font_1: "Work Sans", sans-serif;
+$font_1: 'Poppins', sans-serif;
 $transition_dur: 0.3s;
 
 // breakpoints

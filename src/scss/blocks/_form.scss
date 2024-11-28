@@ -1,0 +1,103 @@
+@use '../helpers/abstracts' as *;
+
+.content {
+	width: 100%;
+	display: flex;
+	column-gap: $colums_gap;
+}
+.content__coll {
+	width: calc(100% / $colums-number - $colums-gap * ($colums-number - 1) / $colums-number);
+	.info {
+		max-width: 49rem;
+		margin-bottom: 5rem;
+		.content__title {
+			font-size: 40px;
+			font-weight: 700;
+			text-transform: capitalize;
+			color: $color_form_tytle;
+		}
+		.content__text {
+			font-size: 20px;
+			font-weight: 400;
+			color: $color_form_text;
+		}
+	}
+}
+.agency_form {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 49rem;
+	height: 7.2rem;
+	padding: 0 2rem;
+	border-radius: 1.2rem;
+	background-color: $color_form_bg;
+	.agency_form__ico {
+		display: block;
+		width: 2.4rem;
+		height: 2.4rem;
+		.agency_form__img {
+			@extend %contain_img;
+		}
+	}
+	.agency_form__input {
+		width: 23.4rem;
+		font-size: 16px;
+		font-weight: 400;
+		color: $color_text;
+		background-color: transparent;
+		border: none;
+	}
+	.agency_form__button {
+		min-width: 17.2rem;
+		height: 4.7rem;
+		display: inline-block;
+		line-height: 4.7rem;
+		text-align: center;
+		white-space: nowrap;
+		border-radius: 1.2rem;
+		font-size: 18px;
+		font-weight: 600;
+		color: $color_white;
+		background-color: $color_bg_button;
+		box-shadow: 0px 6px 20px 0px $color_bg_button_sh;
+		cursor: pointer;
+	}
+}
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: $colums_gap;
+	row-gap: $rows_gap;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+	width: calc(100% / $colums-number - $colums-gap * ($colums-number - 1) / $colums-number);
+	.card__ico {
+		display: flex;
+		align-items: center;
+		width: 5rem;
+		height: 5rem;
+		border-radius: 1.2rem;
+		overflow: hidden;
+		background-color: $color_form_bg;
+		.card__img {
+			height: 2.4rem;
+			width: 100%;
+			object-position: center;
+			object-fit: contain;
+		}
+	}
+	.card__title {
+		font-size: 20px;
+		font-weight: 600;
+		color: $color_title;
+	}
+	.card__text {
+		font-size: 16px;
+		font-weight: 400;
+        color:$color_text ;
+	}
+}
