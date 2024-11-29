@@ -13,22 +13,22 @@ text-transform: capitalize;
 margin-bottom: 5rem;
 text-align: center;
 }
+
 .trust_pic{
-    width: 90rem;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8rem;
     margin-bottom: 2rem;
+   
     .trust_pic__box{
-        display:inline-block;
+        display: block;
         width: 12rem;
         height: 3.6rem;
         .trust_pic__img{
             @extend %contain_img;
         }
+        
     }
-    .trust_pic__box:not(:last-child){
-        margin-right: 8%;
-    }
-
+    
 }
