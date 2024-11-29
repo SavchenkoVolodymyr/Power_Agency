@@ -1,4 +1,5 @@
 @use './helpers/reset';
+@use './base';
 @use './blocks/header';
 @use './blocks/form';
-@use './base';
+@use './blocks/trust';

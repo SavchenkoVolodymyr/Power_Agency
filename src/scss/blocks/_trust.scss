@@ -1,0 +1,34 @@
+@use '../helpers/abstracts' as *;
+
+.section_trust{
+    padding: 6rem 0 10rem;
+}
+.trust_title{
+    
+font-size: 20px;
+font-weight: 600;
+line-height: 24px;
+color: $color_form_tytle;
+text-transform: capitalize;
+margin-bottom: 5rem;
+text-align: center;
+}
+.trust_pic{
+    width: 90rem;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 2rem;
+    .trust_pic__box{
+        display:inline-block;
+        width: 12rem;
+        height: 3.6rem;
+        .trust_pic__img{
+            @extend %contain_img;
+        }
+    }
+    .trust_pic__box:not(:last-child){
+        margin-right: 8%;
+    }
+
+}
