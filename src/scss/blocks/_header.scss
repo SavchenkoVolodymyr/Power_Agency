@@ -7,35 +7,6 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-        .header_logo{
-            display: block;
-            position: relative;
-            min-width: 94px;
-            height: 38px;
-            line-height: 38px;
-            text-align:center;
-            text-decoration: none;
-            font-size: 24px;
-            font-weight: 700;
-            &::after{
-                content: '';
-                position: absolute;
-                top: 21px;
-                right: 0;
-                width: 6px;
-                height: 6px;
-                background: url(../../imgs/Ellipse_82.svg) center no-repeat;
-            }
-            &::before{
-                content: '';
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 16px;
-                height: 16px;
-                background: url(../../imgs/Ellipse_83.svg) center no-repeat;
-            }
-        }
 		.nav_list {
 			display: flex;
 			column-gap: 60px;
@@ -52,4 +23,33 @@
            
 		}
 	}
+}
+.logo{
+    display: block;
+    position: relative;
+    width: 9.4rem;
+    height: 3.8rem;
+    line-height: 3.8rem;
+    text-align:center;
+    text-decoration: none;
+    font-size: 2.4rem;
+    font-weight: 700;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 2.1rem;
+        right: 0;
+        width: 0.6rem;
+        height: 0.6rem;
+        background: url(../../imgs/Ellipse_82.svg) center no-repeat;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 1.6rem;
+        height: 1.6rem;
+        background: url(../../imgs/Ellipse_83.svg) center no-repeat;
+    }
 }
