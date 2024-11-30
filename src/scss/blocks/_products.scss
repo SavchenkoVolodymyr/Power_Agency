@@ -1,0 +1,67 @@
+@use '../helpers/abstracts' as *;
+
+.products_tytle{
+    font-weight: 700;
+    margin-bottom: 1.4rem;
+    text-transform: capitalize;
+}
+.base_text--ind{
+    margin-bottom: 4rem;
+}
+.content_pic{
+    max-width: 55.5rem;
+    height: 44.8rem;
+    border-radius: 30px;
+    overflow: hidden;
+    .content_pic__img{
+        @extend %cover_img;
+    }
+}
+.content_pic__ind{
+    margin-bottom: 1.4rem;
+}
+.app_date{
+font-size: 14px;
+font-weight: 400;
+color: $app_date_color;
+}
+.app_date__ind{
+    margin-bottom: 1rem;
+}
+.content__subtytle{
+font-size: 24px;
+font-weight: 700;
+color: $color_form_tytle;
+}
+.content__subtytle--ind{
+    margin-bottom: 1.2rem;
+}
+.content__subtext{
+font-size: 14px;
+font-weight: 400;
+line-height: 26px;
+}
+.cards__row{
+    row-gap: $card_row_gap;
+}
+.card_item{
+    width: calc(100% / $colums-number - $colums-gap * ($colums-number - 1) / $colums-number);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.card_item__pic{
+    width: 26.3rem;
+    height: 18.8rem;
+    border-radius: 3rem;
+    overflow: hidden;
+    .card_item__img{
+        @extend %cover_img;
+    }
+}
+.card_item__tytle{
+font-size: 18px;
+font-weight: 700;
+line-height: 28px;
+color: $color_text;
+}

@@ -16,12 +16,13 @@
 			text-transform: capitalize;
 			color: $color_form_tytle;
 		}
-		.content__text {
-			font-size: 20px;
-			font-weight: 400;
-			color: $color_form_text;
-		}
+		
 	}
+}
+.base_text {
+	font-size: 20px;
+	font-weight: 400;
+	color: $color_form_text;
 }
 .agency_form {
 	display: flex;

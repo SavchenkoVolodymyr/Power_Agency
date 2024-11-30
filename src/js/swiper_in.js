@@ -5,16 +5,14 @@ const swiper = new Swiper('.trust_pic_swiper', {
 	centeredSlides: true,
 	centeredSlides: true,
 	autoplay: {
-	  delay: 1500,
-	  disableOnInteraction: false,
+		delay: 1500,
+		disableOnInteraction: false,
 	},
-	
-  });
+});
 
 const swiperTwo = new Swiper('.comments_nav', {
 	slidesPerView: 5,
 	loop: true,
-
 });
 
 const swiperOne = new Swiper('.comments_content', {
@@ -23,4 +21,3 @@ const swiperOne = new Swiper('.comments_content', {
 		swiper: swiperTwo,
 	},
 });
-
