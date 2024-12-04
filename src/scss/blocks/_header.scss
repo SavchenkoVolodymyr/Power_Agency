@@ -3,7 +3,6 @@
 	top: 26px;
 	margin-bottom: 124px;
 	.header_in {
-		max-width: 794px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -41,7 +40,7 @@
         right: 0;
         width: 0.6rem;
         height: 0.6rem;
-        background: url(../../imgs/Ellipse_82.svg) center no-repeat;
+        background: url(.././imgs/Ellipse_82.svg) center no-repeat;
     }
     &::before{
         content: '';
@@ -50,6 +49,6 @@
         left: 0;
         width: 1.6rem;
         height: 1.6rem;
-        background: url(../../imgs/Ellipse_83.svg) center no-repeat;
+        background: url(.././imgs/Ellipse_83.svg) center no-repeat;
     }
 }

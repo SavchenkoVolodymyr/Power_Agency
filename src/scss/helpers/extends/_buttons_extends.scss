@@ -1,44 +1,59 @@
+@use '../variables' as *;
+
 @mixin st_btn {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
-
 	text-align: center;
 	white-space: nowrap;
-
 	cursor: pointer;
 	text-decoration: none;
 }
 
-//color extends
-// %transp_btn_1 {
-// 	@include st_btn;
 
-// 	font-weight: 700;
-// 	color: $color_white;
-// 	background-color: transparent;
-// 	transition: 0.3s ease;
-// 	border: 2px solid $color_white;
+%accent_btn_1 {
+	@include st_btn;
+	font-weight: 600;
+	color: $color_white;
+	background-color: $color_bg_button;
+	transition: 0.3s ease;
 
-// 	&:hover {
-// 		background-color: $color_white;
-// 		color: $color_black;
-// 	}
-// }
+	&:hover {
+		background-color: rgba($color_bg_button, 80%);
+	}
+}
 
-//size extends
-// %btn_size_1 {
-// 	min-width: 23.2rem;
-// 	height: 5.4rem;
-// 	padding: 0 2rem;
+%accent_btn_sh {
+	border: none;
+	box-shadow: 0 0.6rem 2rem 0 $color_bg_button_sh;
+}
 
-// 	line-height: 5.4rem;
-// 	font-size: 1.6rem;
 
-// 	border-radius: 2px;
-// }
+%btn_size_1 {
+	min-width: 18.1rem;
+	height: 4.7rem;
+	font-size: 1.8rem;
+	line-height: 4.7rem;
+	padding: 0 2rem;
+	border-radius: 1.2rem;
+}
 
-// .btn_white_1 {
-// 	@extend %white_btn_1;
-// 	@extend %btn_size_1;
-// }
+%btn_size_2 {
+	min-width: 17.2rem;
+	height: 4.7rem;
+	font-size: 1.8rem;
+	line-height: 4.7rem;
+	padding: 0 2rem;
+	border-radius: 1.2rem;
+}
+
+.button_base{
+@extend %accent_btn_1;
+@extend %btn_size_1;
+}
+
+.button_base--large{
+	@extend %accent_btn_1;
+	@extend %accent_btn_sh;
+	@extend %btn_size_2;
+}
