@@ -9,7 +9,7 @@
 .section_hero__title {
 	font-size: 6rem;
 	font-weight: 700;
-	line-height: 11rem;
+	line-height: 9rem;
 	color: $color_title;
 }
 .section_hero__title--ind {
@@ -87,7 +87,7 @@
 		.primary_pic__img {
 			width: 100%;
 			height: 100%;
-			object-position: left bottom;
+			object-position: 1rem 1rem;
 			object-fit: contain;
 			background-color: transparent;
 		}
@@ -96,8 +96,8 @@
 
 .primary_pic__decor {
 	position: absolute;
-	left: 3.8rem;
-	bottom: -1.2rem;
+	left: 5.8rem;
+	bottom: -2.2rem;
 	width: 39.7rem;
 	height: 39.7rem;
 	border-radius: 50%;
@@ -132,8 +132,8 @@
 
 .primary_info {
 	position: absolute;
-	bottom: -4.5rem;
-	left: 12.5rem;
+	bottom: -4.7rem;
+	left: 13.5rem;
 	z-index: 3;
 	width: 23.9rem;
 	border-radius: 0.9rem;
@@ -182,7 +182,7 @@
 
 .content_decor_xd {
 	transform: rotate(-17.81deg);
-	top: 5rem;
+	top: 7rem;
 	left: 3.3rem;
 }
 .content_decor_xd__bg {
@@ -213,8 +213,8 @@
 
 .content_decor_figma {
 	transform: rotate(-17.81deg);
-	top: 5.5rem;
-	right: 5rem;
+	top: 7.2rem;
+	right: 2.1rem;
 }
 .content_decor_figma__bg {
 	width: 8.4rem;

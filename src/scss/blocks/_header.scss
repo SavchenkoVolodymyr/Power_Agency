@@ -1,17 +1,17 @@
 .header {
 	position: sticky;
-	top: 26px;
-	margin-bottom: 124px;
+	top: 2.6rem;
+	margin-bottom: 5.6rem;
 	.header_in {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		.nav_list {
 			display: flex;
-			column-gap: 60px;
+			column-gap: 6rem;
 			.nav_list__link {
 				text-decoration: none;
-				font-size: 16px;
+				font-size: 1.6rem;
 				font-weight: 400;
                 color:#1E1F4B;
                 border: 1px solid #fff;
