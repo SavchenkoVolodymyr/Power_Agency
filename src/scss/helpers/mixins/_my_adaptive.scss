@@ -1,0 +1,22 @@
+
+
+
+// I did this as an experiment
+
+@mixin adapt_font ($min_font, $max_font, $min_vw, $max_vw){
+    font-size: calc(#{$min_font}px + ($max_font - $min_font) * ((100vw - #{$min_vw}px) / ($max_vw - $min_vw)));
+}
+
+// @mixin hover {
+ 
+//   @media (hover: hover){
+//     &:hover{
+//         @content;
+//     }
+// }
+//  @media (hover: none){
+//     &:active{
+//        @content;
+//     }
+//   }
+// }

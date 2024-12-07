@@ -4,9 +4,22 @@
     font-weight: 700;
     margin-bottom: 1.4rem;
     text-transform: capitalize;
+    @include bp(1024px, max){
+        text-align: center;
+    }
+    @include bp_m(768px, 1024px){
+        @include adapt_font(30, 40, 768, 1024);
+    }
 }
-.base_text--ind{
+.base_text__products{
     margin-bottom: 4rem;
+    @include bp(1024px, max){
+        text-align: center;
+    }
+    @include bp_m(768px, 1024px){
+        @include adapt_font(16, 20, 768, 1024);
+    }
+
 }
 .content_pic{
     max-width: 55.5rem;
@@ -41,7 +54,8 @@ font-size: 14px;
 font-weight: 400;
 line-height: 26px;
 }
-.cards__row{
+.cards__in{
+
     row-gap: $card_row_gap;
 }
 .card_item{

@@ -21,10 +21,11 @@
 .section_hero__title {
 	font-size: 6rem;
 	font-weight: 700;
-	line-height: 9rem;
+	line-height: 10rem;
 	color: $color_title;
-	@include desktop (1025px, 1180px){
-		font-size: calc(40px + 20 * ((100vw - 1025px) / (1180 - 1025)));
+	@include bp_m (1025px, 1180px){
+		// font-size: calc(40px + 20 * ((100vw - 1025px) / (1180 - 1025)));
+		@include  adapt_font (40, 60, 1025, 1180);
 	}
 
 	@include bp(1024px, max){
@@ -35,18 +36,43 @@
 	margin-bottom: 4.2rem;
 }
 .products_link {
-	vertical-align: -45%;
-	display: inline-block;
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	text-decoration: none;
-	text-align: center;
-	width: 6.23em;
-	height: 2.2em;
-	& > img {
-		@extend %cover_img;
+	width: 5.9em;
+	height: 1.8em;
+	color: $color_bg_button;
+	border: 0.13em solid $color_bg_button;
+	span{
+		position: absolute;
+		width: 0.47em;
+		height: 0.47em;
+		border-radius: 50%;
+		border: 0.13em solid $color_bg_button;
+		background-color: $color_white;
+	}
+	span:nth-child(1){
+		top: -0.28em;
+		left: -0.28em;
+	}
+	span:nth-child(2){
+		top: -0.28em;
+		right: -0.28em;	
+	}
+	span:nth-child(3){
+		bottom: -0.28em;
+		right: -0.28em;
+	
+	}
+	span:nth-child(4){
+		bottom: -0.28em;
+		left: -0.28em;	
 	}
 }
 .base_text__hero {
-	max-width: 55.5rem;
+	max-width: 27.75em;
 	margin-bottom: 2.4rem;
 }
 .hero_content_footer {

@@ -16,11 +16,25 @@
 	font-weight: 600;
 	color: $color_white;
 	background-color: $color_bg_button;
-	transition: 0.3s ease;
+	transition: 0.2s ease;
 
-	&:hover {
-		background-color: rgba($color_bg_button, 80%);
+	@media (hover: hover){
+		&:hover{
+			background-color: rgba($color_bg_button, 80%);
+		}
 	}
+	@media (hover: none){
+		&:active{
+			background-color: rgba($color_bg_button, 80%);
+		}		
+	}
+
+	// &:hover {
+	// 	background-color: rgba($color_bg_button, 80%);
+	// }
+	// @include hover{
+	// 	background-color: rgba($color_bg_button, 80%)
+	// }
 }
 
 %accent_btn_sh {

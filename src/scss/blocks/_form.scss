@@ -4,9 +4,18 @@
 	width: 100%;
 	display: flex;
 	column-gap: $colums_gap;
+	@include bp(1024px, max){
+		flex-direction: column;
+		align-items: center;
+		row-gap: 5rem;
+	}
 }
 .content__coll {
 	width: calc(100% / $colums-number - $colums-gap * ($colums-number - 1) / $colums-number);
+	@include bp(1024px, max){
+		width: 100%;
+		max-width: 55.5rem;
+	}
 	.info {
 		max-width: 49rem;
 		margin-bottom: 5rem;
@@ -23,7 +32,7 @@
 	font-size: 2rem;
 	font-weight: 400;
 	color: $color_form_text;
-	@include desktop (1025px, 1180px){
+	@include bp_m (1025px, 1180px){
 		font-size: calc(18px + 2 * ((100vw - 1025px) / (1180 - 1025)));
 	}
 }
