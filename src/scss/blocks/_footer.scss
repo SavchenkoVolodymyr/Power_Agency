@@ -13,10 +13,18 @@ footer {
 		display: flex;
 		column-gap: 1.6rem;
 	}
+	@include bp (768px, max){
+		flex-direction: column;
+		row-gap: 3rem;
+	}
 }
 .logo--white {
 	color: $color_white;
+	@include bp (768px, max){
+		align-self: start;
+	}
 }
+
 .media_pic {
 	display: flex;
 	align-items: center;
@@ -62,6 +70,9 @@ footer {
 		@include bp(1024px, max){
 			align-self: start;
 			column-gap: 5rem;
+		}
+		@include bp (767px, max){
+			flex-direction: column;
 		}
 	}
 	

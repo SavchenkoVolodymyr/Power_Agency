@@ -15,6 +15,10 @@
 	@include bp(1024px, max){
 		width: 100%;
 		max-width: 55.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
 	}
 	.info {
 		max-width: 49rem;
@@ -24,6 +28,10 @@
 			font-weight: 700;
 			text-transform: capitalize;
 			color: $color_form_tytle;
+			@include bp (768px, max){
+				@include adapt_font(34, 40, 425, 768);
+			}
+			
 		}
 		
 	}
@@ -34,6 +42,10 @@
 	color: $color_form_text;
 	@include bp_m (1025px, 1180px){
 		font-size: calc(18px + 2 * ((100vw - 1025px) / (1180 - 1025)));
+	}
+	@include bp (768px, max){
+		@include adapt_font(16, 20, 425, 768);
+		max-width: 24.1em;
 	}
 }
 .agency_form {
@@ -51,6 +63,9 @@
 		height: 2.4rem;
 		.agency_form__img {
 			@extend %contain_img;
+		}
+		@include bp (768px, max){
+			display: none;
 		}
 	}
 	.agency_form__input {
@@ -77,18 +92,25 @@
 		border: none;
 		cursor: pointer;
 	}
+	@include bp (768px, max){
+		max-width: 42rem;
+	}
 }
 .cards {
 	display: flex;
 	flex-wrap: wrap;
 	column-gap: $colums_gap;
 	row-gap: $rows_gap;
+	@include bp (768px, max){
+		justify-content: center;
+	}
 }
 .card {
 	display: flex;
 	flex-direction: column;
 	row-gap: 1rem;
 	width: calc(100% / $colums-number - $colums-gap * ($colums-number - 1) / $colums-number);
+	max-width: 26.2rem;
 	.card__ico {
 		display: flex;
 		align-items: center;
@@ -113,5 +135,8 @@
 		font-size: 16px;
 		font-weight: 400;
         color:$color_text ;
+	}
+	@include bp (768px, max){
+		width: 100%;
 	}
 }

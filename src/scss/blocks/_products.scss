@@ -10,15 +10,20 @@
     @include bp_m(768px, 1024px){
         @include adapt_font(30, 40, 768, 1024);
     }
+    @include bp (768px, max){
+        @include adapt_font(34, 40, 425, 768);
+    }
 }
 .base_text__products{
     margin-bottom: 4rem;
     @include bp(1024px, max){
-        text-align: center;
+       margin-inline: auto;
     }
     @include bp_m(768px, 1024px){
         @include adapt_font(16, 20, 768, 1024);
     }
+
+    
 
 }
 .content_pic{
@@ -28,6 +33,10 @@
     overflow: hidden;
     .content_pic__img{
         @extend %cover_img;
+    }
+    @include bp (768px, max){
+       max-width: 36.5rem;
+       height: 32.1rem;
     }
 }
 .content_pic__ind{
@@ -63,6 +72,10 @@ line-height: 26px;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
+    @include bp (768px, max){
+       width: 100%;
+       max-width: 26.3rem;
+    }
 }
 .card_item__pic{
     width: 26.3rem;

@@ -1,28 +1,35 @@
 @use '../helpers/abstracts' as *;
 
 .container_decor{
+	position: relative;
 	&::after,
 	&::before {
 		position: absolute;
 		content: '';
 		
-		width: 9.8rem;
-		height: 7.1rem;
+		width: 10.8rem;
+		height: 9.1rem;
 		
 		background-image: url(.././imgs/comments/decor.svg);
 		background-position: center;
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: cover;
+		@include bp (1024px, max) {
+			display: none;
+		}
+	}
+	&::before{
+		left: 7.5rem;
+		top: -1rem;
 	}
 	&::after {
-		left: 140rem;
-		bottom: -110rem;
+		right: 0.5rem;
+		bottom: 5.5rem;
 	}
 }
 .comments {
 	position: relative;
 	display: block;
-
 	max-width: 67rem;
 	width: 100%;
 	margin: 0 auto;
@@ -50,6 +57,9 @@
 		right: -6rem;
 		rotate: 180deg;
 	}
+	@include bp (1024px, max){
+		max-width: 63rem;
+	}
 }
 
 .comments_content {
@@ -75,6 +85,9 @@
 	line-height: 3.5;
 	text-align: center;
 	color: $color_text_2;
+	@include bp (1024px, max){
+		font-size: 1.5rem;
+	}
 }
 
 // nav

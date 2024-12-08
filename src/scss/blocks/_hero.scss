@@ -24,7 +24,6 @@
 	line-height: 10rem;
 	color: $color_title;
 	@include bp_m (1025px, 1180px){
-		// font-size: calc(40px + 20 * ((100vw - 1025px) / (1180 - 1025)));
 		@include  adapt_font (40, 60, 1025, 1180);
 	}
 
@@ -235,6 +234,9 @@
 .content_decor_diamond {
 	position: absolute;
 	z-index: 5;
+	@include bp(767px, max){
+       display: none;
+    }
 }
 
 .content_decor_xd {
