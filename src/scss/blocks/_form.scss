@@ -36,10 +36,7 @@
 		
 	}
 }
-.base_text {
-	font-size: 2rem;
-	font-weight: 400;
-	color: $color_form_text;
+.base_text__form{
 	@include bp_m (1025px, 1180px){
 		font-size: calc(18px + 2 * ((100vw - 1025px) / (1180 - 1025)));
 	}
