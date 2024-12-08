@@ -1,4 +1,81 @@
 @use '../helpers/abstracts' as *;
+.nav{
+	@include bp (767px, max){
+		position: fixed;
+		z-index: 998;
+
+		top: 0;
+		left: 0;
+		width: 100dvw;
+		height: 100dvh;
+		background-color: $color_accent;
+		display: flex;
+
+		transition: all 0.3s ease-in-out;
+		overflow: auto;
+
+		transform: translateX(-100dvw);
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
+}
+.nav.active {
+	@include bp (767px, max){
+	transform: translateX(0);
+	opacity: 1;
+	visibility: visible;
+	pointer-events: auto;
+	}
+}
+.nav_close{
+	@include bp (767px, max){
+		display: block;
+		position: absolute;
+		z-index: 999;
+		top: 6.8rem;
+		left: 2rem;
+
+		height: 5rem;
+		width: 5rem;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		background-image: url(.././imgs/header/nav_cross.png);
+		border: none;
+
+		cursor: pointer;
+	}
+}
+.nav__list{
+	@include bp (767px, max){
+		display: flex;
+		flex-direction: column;
+		padding: 4rem;
+		align-items: center;
+		row-gap: 7rem;
+		margin: auto;
+		text-align: center;
+	}
+}
+.menu_button{
+	@include bp (767px, max){
+		display: block;
+
+		height: 2rem;
+		width: 2rem;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		background-image: url(.././imgs/header/burger_menu.svg);
+		border: none;
+
+		cursor: pointer;
+	}
+}
+
 
 .header {
 	margin-top: 2.6rem;
@@ -22,10 +99,16 @@
 				font-size: 1.6rem;
 				font-weight: 400;
 				color: #1e1f4b;
-				border: 1px solid #fff;
+				border: 1px solid $color_white;
 				&:hover {
 					border: 1px solid #1e1f4b;
 				}
+				@include bp (767px, max){
+					color: $color_white;
+					font-size: 4rem;
+					border: none;
+				}
+
 			}
 		}
 	}
@@ -57,5 +140,10 @@
 		width: 1.6rem;
 		height: 1.6rem;
 		background: url(.././imgs/Ellipse_83.svg) center no-repeat;
+	}
+}
+.nav__list{
+	@include bp (767px, max){
+		
 	}
 }
