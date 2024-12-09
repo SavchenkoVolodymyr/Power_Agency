@@ -4,7 +4,17 @@ const menuButton = document.querySelector('.menu_button');
 const menuCloseButton = document.querySelector('.nav_close');
 const menu = document.querySelector('.nav');
 const bodyK = document.querySelector('.body');
-const navLink = document.querySelector('.nav_list__link')
+const navLink = document.querySelectorAll('.nav_list__link')
+
+
+
+navLink.forEach((element) => {
+	element.addEventListener('click', function () {
+		menu.classList.remove('active');
+		bodyK.classList.remove('body--overflow_hidden');
+	});
+})
+
 
 menuButton.addEventListener('click', function () {
 	menu.classList.add('active');
@@ -12,11 +22,6 @@ menuButton.addEventListener('click', function () {
 });
 
 menuCloseButton.addEventListener('click', function () {
-	menu.classList.remove('active');
-	bodyK.classList.remove('body--overflow_hidden');
-});
-
-navLink.addEventListener('click', function () {
 	menu.classList.remove('active');
 	bodyK.classList.remove('body--overflow_hidden');
 });
