@@ -1,10 +1,18 @@
 @use '../helpers/abstracts' as *;
+.section{
+	@include bp(1024px, max){
+		padding-top: 5rem;
+	}
+}
 .hero_content {
 	display: flex;
 	@include bp(1024px, max){
 		flex-direction: column;
 		row-gap: 10rem;
 		align-items: center;
+	}
+	@include bp(767px, max){
+		row-gap: 5rem;
 	}
 }
 .hero_content_info {
@@ -146,7 +154,7 @@
 		margin: 0 auto;
 	}
 	@include bp(767px, max){
-		@include adapt_font(8.9, 10, 425, 767);
+		@include adapt_font(8, 10, 425, 767);
 	}
 	
 }
@@ -253,7 +261,7 @@
 	text-align: center;
 	color: $color_text;
 	@include bp(767px, max){
-		@include adapt_font(14, 16, 425, 767);
+		@include adapt_font(13, 16, 425, 767);
 	}
 }
 
