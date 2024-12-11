@@ -1,24 +1,26 @@
 @use '../helpers/abstracts' as *;
 .section{
-	@include bp(1024px, max){
+	@include bp($point_3){
 		padding-top: 5rem;
 	}
 }
 .hero_content {
 	display: flex;
-	@include bp(1024px, max){
+	@include bp($point_3){
 		flex-direction: column;
 		row-gap: 10rem;
 		align-items: center;
 	}
-	@include bp(767px, max){
+	@include bp($point_3){
 		row-gap: 5rem;
 	}
 }
 .hero_content_info {
 	max-width: 71.6rem;
-	margin-right: -2rem;
-	@include bp(1024px, max){
+	@include bp($point_2, min){
+		margin-right: -2rem;
+	}
+	@include bp($point_3){
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -27,18 +29,17 @@
 
 }
 .section_hero__title {
-	font-size: 6rem;
+	
 	font-weight: 700;
 	line-height: 10rem;
 	color: $color_title;
-	@include bp_m (1025px, 1180px){
-		@include  adapt_font (40, 60, 1025, 1180);
-	}
-
-	@include bp(1024px, max){
+	@include bp ($point_3){
 		text-align: center;
 	}
-	@include bp(767px, max){
+	@include bp($point_4, min){
+		font-size: 6rem;
+	}
+	@include bp($point_5){
 		@include adapt_font(30, 60, 425, 767);
 		line-height: 1.7em;
 	}
@@ -90,10 +91,7 @@
 .base_text__hero {
 	max-width: 27.75em;
 	margin-bottom: 2.4rem;
-	@include bp_m (1025px, 1180px){
-		font-size: calc(18px + 2 * ((100vw - 1025px) / (1180 - 1025)));
-	}
-	@include bp(767px, max){
+	@include bp($point_5){
 		@include adapt_font(14, 20, 425, 767);
 	}
 
@@ -102,7 +100,7 @@
 	display: flex;
 	align-items: center;
 	column-gap: 2.4rem;
-	@include bp(1024px, max){
+	@include bp($point_3){
 		width: 100%;
 		justify-content: space-around;	
 	}
@@ -140,7 +138,7 @@
 .hero_content_video__text {
 	width: 14.6rem;
 	height: 4.8rem;
-	font-size: 16px;
+	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 2.4rem;
 	color: $color_footer_bg;
@@ -149,11 +147,11 @@
 	position: relative;
 	bottom: 6.6rem;
 	left: 8.6rem;
-	@include bp(1024px, max){
+	@include bp($point_3){
 		position: static;
 		margin: 0 auto;
 	}
-	@include bp(767px, max){
+	@include bp($point_5){
 		@include adapt_font(8, 10, 425, 767);
 	}
 	
@@ -163,7 +161,7 @@
 	display: flex;
 	align-items: end;
 	justify-content: center;
-	@include bp(1024px, max){
+	@include bp($point_3){
 		width: 51.7em;
 		height: 51.7em;
 	}
@@ -260,7 +258,7 @@
 	font-weight: 500;
 	text-align: center;
 	color: $color_text;
-	@include bp(767px, max){
+	@include bp($point_5){
 		@include adapt_font(13, 16, 425, 767);
 	}
 }
@@ -270,7 +268,7 @@
 .content_decor_diamond {
 	position: absolute;
 	z-index: 5;
-	@include bp(767px, max){
+	@include bp($point_5){
        display: none;
     }
 }

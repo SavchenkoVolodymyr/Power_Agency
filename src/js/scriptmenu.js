@@ -4,7 +4,7 @@ const menuButton = document.querySelector('.menu_button');
 const menuCloseButton = document.querySelector('.nav_close');
 const menu = document.querySelector('.nav');
 const bodyK = document.querySelector('.body');
-const navLink = document.querySelectorAll('.nav_list__link')
+const navLink = document.querySelectorAll('.nav_list__link');
 
 
 

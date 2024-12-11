@@ -4,38 +4,43 @@
     font-weight: 700;
     margin-bottom: 1.4rem;
     text-transform: capitalize;
-    @include bp(1024px, max){
+    @include bp($point_3){
         text-align: center;
     }
-    @include bp_m(768px, 1024px){
+    @include bp_m($point_4, $point_3){
         @include adapt_font(30, 40, 768, 1024);
     }
     @include bp (768px, max){
-        @include adapt_font(34, 40, 425, 768);
+        @include adapt_font(30, 50, 425, 768);
     }
 }
 .base_text__products{
     margin-bottom: 4rem;
-    @include bp(1024px, max){
+    @include bp($point_3){
        margin-inline: auto;
     }
-    @include bp_m(768px, 1024px){
+    @include bp_m($point_4, $point_3){
         @include adapt_font(16, 20, 768, 1024);
+    }
+    @include bp($point_5){
+        @include adapt_font(16, 30, 425, 767);
     }
 
     
 
 }
 .content_pic{
-    max-width: 55.5rem;
-    height: 44.8rem;
     border-radius: 30px;
     overflow: hidden;
     .content_pic__img{
         @extend %cover_img;
     }
-    @include bp (768px, max){
-       max-width: 36.5rem;
+    @include bp($point_4, min){
+        width: 55.5rem;
+    height: 44.8rem;
+    }
+    @include bp ($point_5){
+       width: 36.5rem;
        height: 32.1rem;
     }
 }
@@ -59,20 +64,27 @@ color: $color_form_tytle;
     margin-bottom: 1.2rem;
 }
 .content__subtext{
-font-size: 14px;
 font-weight: 400;
 line-height: 26px;
+@include bp($point_4, min){
+    font-size: 1.4rem;
+}
+@include bp($point_5){
+    @include adapt_font(9, 14, 425, 767);
+}
 }
 .cards__in{
 
     row-gap: $card_row_gap;
 }
 .card_item{
-    width: calc(100% / $colums-number - $colums-gap * ($colums-number - 1) / $colums-number);
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
-    @include bp (768px, max){
+    @include bp($point_4, min){
+          width: calc(100% / $colums-number - $colums-gap * ($colums-number - 1) / $colums-number);
+    }
+    @include bp ($point_5){
        width: 100%;
        max-width: 26.3rem;
     }
