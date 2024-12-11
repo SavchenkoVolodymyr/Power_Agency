@@ -32,7 +32,7 @@
 	display: block;
 	width: 100%;
 	margin: 0 auto;
-
+	max-width: 67rem;
 	&::after,
 	&::before {
 		position: absolute;
@@ -50,18 +50,31 @@
 	}
 
 	&::after {
-		left: -6rem;
+		@include bp($point_2, min){
+			left: -6rem;
+		}
+		@include bp_m ($point_4, $point_3){
+			left: -3.5rem;
+		}
+		@include bp($point_5){
+			left: 0;
+		}
+		
 	}
 	&::before {
-		right: -6rem;
+		@include bp($point_2, min){
+			right: -6rem;
+		}
+		@include bp_m ($point_4, $point_3){
+			right: -3rem;
+		}
+		@include bp($point_5){
+			right: 0;
+		}
+		
 		rotate: 180deg;
 	}
-	@include bp ($point_4, min){
-		max-width: 67rem;
-	}
-	@include bp ($point_5){
-		max-width: 55rem;
-	}
+
 }
 
 .comments_content {
@@ -72,8 +85,14 @@
 }
 
 .comments_title {
-	margin-bottom: 6.7rem;
 	text-transform: capitalize;
+	@include bp($point_4, min){
+		margin-bottom: 6.7rem;		
+	}
+	@include bp($point_5){
+		margin-bottom: 1.68em;
+		@include adapt_font (28, 40, 425, 767);
+	}
 }
 
 .comments__item {
@@ -82,13 +101,16 @@
 }
 
 .comments__item_text {
-	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 3.5;
 	text-align: center;
 	color: $color_text_2;
-	@include bp (1024px, max){
-		font-size: 1.5rem;
+	@include bp ($point_4, min){
+		font-size: 1.6rem;
+	}
+	@include bp($point_5){
+		@include  adapt_font (9.2, 16, 425, 767);
+		max-width: 41.8em;
 	}
 }
 
@@ -161,4 +183,15 @@
 	font-size: 2rem;
 	font-weight: 500;
 	white-space: nowrap;
+}
+
+.swiper-button-prev,
+.swiper-button-next{
+	@include bp ($point_2, min){
+		display: none;
+	}
+	@include bp ($point_3){
+		top: 25%;
+		color: $color_accent;
+	}
 }

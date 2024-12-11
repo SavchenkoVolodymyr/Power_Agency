@@ -11,21 +11,21 @@ const swiper = new Swiper('.trust_pic_swiper', {
 });
 
 const swiperTwo = new Swiper('.comments_nav', {
-	// slidesPerView: 5,
+	slidesPerView: 1,
 	loop: true,
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	  },
 	breakpoints: {
-        580: {
-          slidesPerView: 1,
+        425: {
+          slidesPerView: 1
         },
         768: {
-          slidesPerView: 3,
+          slidesPerView: 3
         },
         1024: {
-          slidesPerView: 5,
+          slidesPerView: 5
         },
       },
 });
