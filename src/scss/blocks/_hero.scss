@@ -1,45 +1,43 @@
 @use '../helpers/abstracts' as *;
-.section{
-	@include bp($point_3){
+.section {
+	@include bp($point_3) {
 		padding-top: 5rem;
 	}
 }
 .hero_content {
 	display: flex;
-	@include bp($point_3){
+	@include bp($point_3) {
 		flex-direction: column;
 		row-gap: 10rem;
 		align-items: center;
 	}
-	@include bp($point_3){
+	@include bp($point_3) {
 		row-gap: 5rem;
 	}
 }
 .hero_content_info {
 	max-width: 71.6rem;
-	@include bp($point_2, min){
+	@include bp($point_2, min) {
 		margin-right: -2rem;
 	}
-	@include bp($point_3){
+	@include bp($point_3) {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		margin-right: 0;
 	}
-
 }
 .section_hero__title {
-	
 	font-weight: 700;
 	line-height: 10rem;
 	color: $color_title;
-	@include bp ($point_3){
+	@include bp($point_3) {
 		text-align: center;
 	}
-	@include bp($point_4, min){
+	@include bp($point_4, min) {
 		font-size: 6rem;
 	}
-	@include bp($point_5){
+	@include bp($point_5) {
 		@include adapt_font(30, 60, 425, 767);
 		line-height: 1.7em;
 	}
@@ -57,7 +55,7 @@
 	height: 1.8em;
 	color: $color_bg_button;
 	border: 0.13em solid $color_bg_button;
-	span{
+	span {
 		position: absolute;
 		width: 0.47em;
 		height: 0.47em;
@@ -65,22 +63,21 @@
 		border: 0.13em solid $color_bg_button;
 		background-color: $color_white;
 	}
-	span:nth-child(1){
+	span:nth-child(1) {
 		top: -0.28em;
 		left: -0.28em;
 	}
-	span:nth-child(2){
+	span:nth-child(2) {
 		top: -0.28em;
-		right: -0.28em;	
+		right: -0.28em;
 	}
-	span:nth-child(3){
+	span:nth-child(3) {
 		bottom: -0.28em;
 		right: -0.28em;
-	
 	}
-	span:nth-child(4){
+	span:nth-child(4) {
 		bottom: -0.28em;
-		left: -0.28em;	
+		left: -0.28em;
 	}
 }
 .base_text {
@@ -91,20 +88,19 @@
 .base_text__hero {
 	max-width: 27.75em;
 	margin-bottom: 2.4rem;
-	@include bp($point_5){
+	@include bp($point_5) {
 		@include adapt_font(14, 20, 425, 767);
 	}
-
 }
 .hero_content_footer {
 	display: flex;
 	align-items: center;
 	column-gap: 2.4rem;
-	@include bp($point_3){
+	@include bp($point_3) {
 		width: 100%;
-		justify-content: space-around;	
+		justify-content: space-around;
 	}
-	@include bp(500px, max){
+	@include bp(500px, max) {
 		flex-direction: column;
 		row-gap: 2rem;
 	}
@@ -147,21 +143,20 @@
 	position: relative;
 	bottom: 6.6rem;
 	left: 8.6rem;
-	@include bp($point_3){
+	@include bp($point_3) {
 		position: static;
 		margin: 0 auto;
 	}
-	@include bp($point_5){
+	@include bp($point_5) {
 		@include adapt_font(8, 10, 425, 767);
 	}
-	
 }
 .Hero_content_decor__box {
 	position: relative;
 	display: flex;
 	align-items: end;
 	justify-content: center;
-	@include bp($point_3){
+	@include bp($point_3) {
 		width: 51.7em;
 		height: 51.7em;
 	}
@@ -258,7 +253,7 @@
 	font-weight: 500;
 	text-align: center;
 	color: $color_text;
-	@include bp($point_5){
+	@include bp($point_5) {
 		@include adapt_font(13, 16, 425, 767);
 	}
 }
@@ -268,9 +263,9 @@
 .content_decor_diamond {
 	position: absolute;
 	z-index: 5;
-	@include bp($point_5){
-       display: none;
-    }
+	@include bp($point_5) {
+		display: none;
+	}
 }
 
 .content_decor_xd {
@@ -340,12 +335,12 @@
 	top: 0.6rem;
 	left: -5.1rem;
 }
-.content_decor_diamond__bg{
+.content_decor_diamond__bg {
 	width: 4.7rem;
 	height: 4.7rem;
 	border-radius: 50%;
 	box-shadow: 0rem 0.6rem 1.6rem 0rem $color_dec_sh;
-	background-color:  rgba($color_dec_dia, 0.8);
+	background-color: rgba($color_dec_dia, 0.8);
 }
 
 .content_decor_diamond__f {
@@ -357,9 +352,8 @@
 	height: 4.7rem;
 	border-radius: 50%;
 	background-color: $color_dec_dia;
-
 }
-.content_decor_diamond__w{
+.content_decor_diamond__w {
 	display: block;
 	width: 2.6rem;
 	height: 2.6rem;

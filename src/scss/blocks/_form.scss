@@ -4,48 +4,44 @@
 	width: 100%;
 	display: flex;
 	column-gap: $colums_gap;
-	@include bp($point_3){
+	@include bp($point_3) {
 		flex-direction: column;
 		align-items: center;
 		row-gap: 5rem;
 	}
 }
 .content__coll {
-	@include bp($point_2){
+	@include bp($point_2) {
 		width: calc(100% / $colums-number - $colums-gap * ($colums-number - 1) / $colums-number);
 	}
-	@include bp($point_3){
+	@include bp($point_3) {
 		width: 100%;
 		max-width: 55.5rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-
 	}
 	.info {
 		max-width: 49rem;
 		margin-bottom: 5rem;
 		.content__title {
-			
 			font-weight: 700;
 			text-transform: capitalize;
 			color: $color_form_tytle;
-			@include bp($point_4, min){
+			@include bp($point_4, min) {
 				font-size: 4rem;
 			}
-			@include bp ($point_5){
+			@include bp($point_5) {
 				@include adapt_font(34, 40, 425, 768);
 			}
-			
 		}
-		
 	}
 }
-.base_text__form{
-	@include bp_m (1025px, 1180px){
+.base_text__form {
+	@include bp_m(1025px, 1180px) {
 		font-size: calc(18px + 2 * ((100vw - 1025px) / (1180 - 1025)));
 	}
-	@include bp ($point_5){
+	@include bp($point_5) {
 		@include adapt_font(16, 20, 425, 768);
 		max-width: 24.1em;
 	}
@@ -60,12 +56,12 @@
 	border-radius: 1.2rem;
 	background-color: $color_form_bg;
 	.agency_form__ico {
-		@include bp($point_4, min){
+		@include bp($point_4, min) {
 			display: block;
 			width: 2.4rem;
 			height: 2.4rem;
 		}
-		@include bp ($point_5){
+		@include bp($point_5) {
 			display: none;
 		}
 	}
@@ -93,10 +89,9 @@
 		border: none;
 		cursor: pointer;
 	}
-	@include bp($point_4, min){
-		
+	@include bp($point_4, min) {
 	}
-	@include bp (768px, max){
+	@include bp(768px, max) {
 		max-width: 42rem;
 	}
 }
@@ -109,7 +104,7 @@
 	flex-wrap: wrap;
 	column-gap: $colums_gap;
 	row-gap: $rows_gap;
-	@include bp ($point_5){
+	@include bp($point_5) {
 		justify-content: center;
 	}
 }
@@ -118,7 +113,7 @@
 	flex-direction: column;
 	row-gap: 1rem;
 	max-width: 26.2rem;
-	@include bp($point_4, min){
+	@include bp($point_4, min) {
 		width: calc(100% / $colums-number - $colums-gap * ($colums-number - 1) / $colums-number);
 	}
 	.card__ico {
@@ -144,9 +139,9 @@
 	.card__text {
 		font-size: 16px;
 		font-weight: 400;
-        color:$color_text ;
+		color: $color_text;
 	}
-	@include bp ($point_5){
+	@include bp($point_5) {
 		width: 100%;
 	}
 }

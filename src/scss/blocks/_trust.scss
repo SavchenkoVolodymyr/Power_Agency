@@ -1,34 +1,31 @@
 @use '../helpers/abstracts' as *;
 
-.section_trust{
-    padding: 6rem 0 10rem;
+.section_trust {
+	padding: 6rem 0 10rem;
 }
-.trust_title{
-    
-font-size: 20px;
-font-weight: 600;
-line-height: 24px;
-color: $color_form_tytle;
-text-transform: capitalize;
-margin-bottom: 5rem;
-text-align: center;
+.trust_title {
+	font-size: 20px;
+	font-weight: 600;
+	line-height: 24px;
+	color: $color_form_tytle;
+	text-transform: capitalize;
+	margin-bottom: 5rem;
+	text-align: center;
 }
 
-.trust_pic{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 8rem;
-    margin-bottom: 2rem;
-   
-    .trust_pic__box{
-        display: block;
-        width: 12rem;
-        height: 3.6rem;
-        .trust_pic__img{
-            @extend %contain_img;
-        }
-        
-    }
-    
+.trust_pic {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 8rem;
+	margin-bottom: 2rem;
+
+	.trust_pic__box {
+		display: block;
+		width: 12rem;
+		height: 3.6rem;
+		.trust_pic__img {
+			@extend %contain_img;
+		}
+	}
 }

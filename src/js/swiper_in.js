@@ -16,18 +16,18 @@ const swiperTwo = new Swiper('.comments_nav', {
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
-	  },
+	},
 	breakpoints: {
-        425: {
-          slidesPerView: 1
-        },
-        768: {
-          slidesPerView: 3
-        },
-        1024: {
-          slidesPerView: 5
-        },
-      },
+		425: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 3,
+		},
+		1024: {
+			slidesPerView: 5,
+		},
+	},
 });
 
 const swiperOne = new Swiper('.comments_content', {

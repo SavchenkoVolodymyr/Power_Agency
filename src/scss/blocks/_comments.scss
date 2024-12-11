@@ -1,24 +1,24 @@
 @use '../helpers/abstracts' as *;
 
-.container_decor{
+.container_decor {
 	position: relative;
 	&::after,
 	&::before {
 		position: absolute;
 		content: '';
-		
+
 		width: 10.8rem;
 		height: 9.1rem;
-		
+
 		background-image: url(.././imgs/comments/decor.svg);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		@include bp ($point_3) {
+		@include bp($point_3) {
 			display: none;
 		}
 	}
-	&::before{
+	&::before {
 		left: 7.5rem;
 		top: -1rem;
 	}
@@ -37,12 +37,12 @@
 	&::before {
 		position: absolute;
 		top: -5rem;
-		
+
 		content: '';
-		
+
 		width: 5.6rem;
 		height: 5rem;
-		
+
 		background-image: url(.././imgs/comments/quote.svg);
 		background-position: center;
 		background-repeat: no-repeat;
@@ -50,31 +50,29 @@
 	}
 
 	&::after {
-		@include bp($point_2, min){
+		@include bp($point_2, min) {
 			left: -6rem;
 		}
-		@include bp_m ($point_4, $point_3){
+		@include bp_m($point_4, $point_3) {
 			left: -3.5rem;
 		}
-		@include bp($point_5){
+		@include bp($point_5) {
 			left: 0;
 		}
-		
 	}
 	&::before {
-		@include bp($point_2, min){
+		@include bp($point_2, min) {
 			right: -6rem;
 		}
-		@include bp_m ($point_4, $point_3){
+		@include bp_m($point_4, $point_3) {
 			right: -3rem;
 		}
-		@include bp($point_5){
+		@include bp($point_5) {
 			right: 0;
 		}
-		
+
 		rotate: 180deg;
 	}
-
 }
 
 .comments_content {
@@ -86,12 +84,12 @@
 
 .comments_title {
 	text-transform: capitalize;
-	@include bp($point_4, min){
-		margin-bottom: 6.7rem;		
+	@include bp($point_4, min) {
+		margin-bottom: 6.7rem;
 	}
-	@include bp($point_5){
+	@include bp($point_5) {
 		margin-bottom: 1.68em;
-		@include adapt_font (28, 40, 425, 767);
+		@include adapt_font(28, 40, 425, 767);
 	}
 }
 
@@ -105,11 +103,11 @@
 	line-height: 3.5;
 	text-align: center;
 	color: $color_text_2;
-	@include bp ($point_4, min){
+	@include bp($point_4, min) {
 		font-size: 1.6rem;
 	}
-	@include bp($point_5){
-		@include  adapt_font (9.2, 16, 425, 767);
+	@include bp($point_5) {
+		@include adapt_font(9.2, 16, 425, 767);
 		max-width: 41.8em;
 	}
 }
@@ -186,11 +184,11 @@
 }
 
 .swiper-button-prev,
-.swiper-button-next{
-	@include bp ($point_2, min){
+.swiper-button-next {
+	@include bp($point_2, min) {
 		display: none;
 	}
-	@include bp ($point_3){
+	@include bp($point_3) {
 		top: 25%;
 		color: $color_accent;
 	}

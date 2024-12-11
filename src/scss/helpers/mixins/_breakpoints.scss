@@ -13,7 +13,7 @@
 // @include bp($point_1, min)
 // @include bp($point_2)
 
-@mixin bp_m ($min_width, $max_width) {
+@mixin bp_m($min_width, $max_width) {
 	@media screen and (min-width: $min_width) and (max-width: $max_width) {
 		@content;
 	}
